@@ -29,7 +29,7 @@ COPY entrypoint.sh /
 
 VOLUME ["/config", "/torrents", "/downloads"]
 
-EXPOSE 8080 6881
+#EXPOSE 8080 6881
 
 USER qbittorrent
 
