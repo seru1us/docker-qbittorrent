@@ -3,7 +3,7 @@ FROM debian:stretch-slim
 RUN set -x \
     # Install qBittorrent-NoX
     && apt-get update \
-    && apt-get install -y qbittorrent-nox dumb-init \
+    && apt-get install -y net-tools qbittorrent-nox dumb-init \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
@@ -21,6 +21,7 @@ RUN set -x \
 
     && mkdir /downloads \
     && chown qbittorrent:qbittorrent /downloads
+    && echo "root:Docker!" | chpasswd
 
 
 # Default configuration file.
