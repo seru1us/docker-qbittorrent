@@ -20,7 +20,7 @@ RUN set -x \
     && ln -s /home/qbittorrent/.local/share/data/qBittorrent /torrents \
 
     && mkdir /downloads \
-    && chown qbittorrent:qbittorrent /downloads
+    && chown qbittorrent:qbittorrent /downloads \
     && echo "root:Docker!" | chpasswd
 
 
